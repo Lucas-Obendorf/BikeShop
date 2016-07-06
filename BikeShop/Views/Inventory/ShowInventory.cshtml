@@ -1,0 +1,23 @@
+﻿<div ng-controller="InventoryController">
+    <table class="table">
+        <tr>
+            <th>Description</th>
+            <th>Rating</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Type</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="bike in Bikes">
+            <td>{{bike.Description}}</td>
+            <td>{{bike.Rating}}</td>
+            <td>{{bike.Price}}</td>
+            <td>{{bike.Quantity}}</td>
+            <td>{{bike.Type}}</td>
+            <td><a class="btn btn-sm btn-primary" href="#/EditBike/{{bike.Id}}">Edit</a></td>
+            <td><a class="btn btn-sm btn-danger" ng-click="DeleteBike(bike.Id)">Delete</a></td>
+        </tr>
+    </table>
+    <a class="btn btn-success pull-right" href="#/NewBike/">Add</a>
+</div>
